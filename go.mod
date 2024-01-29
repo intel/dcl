@@ -1,4 +1,4 @@
-module glidepack
+module dcl
 
 go 1.20
 

@@ -1,4 +1,4 @@
-package glidepack
+package dcl
 
 type PolicyParameters struct {
 	BufferSize int
@@ -14,7 +14,7 @@ func GetDefaultPolicy() PolicyFunc {
 
 func BufferSizePolicy(params *PolicyParameters) []StrategyType {
 	var list []StrategyType
-	if params.BufferSize < 1500 {
+	if params.BufferSize < 65536 {
 		list = []StrategyType{ISAL, IAA, QAT}
 	} else {
 		list = []StrategyType{QAT, IAA, ISAL}

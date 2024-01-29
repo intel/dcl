@@ -1,4 +1,4 @@
-package glidepack
+package dcl
 
 import "errors"
 
